@@ -188,7 +188,7 @@ var Scoreboard = new function () {
     <th class=\"rank\">Rank</th> \
     <th colspan=\"10\" class=\"f_name\">First Name</th> \
     <th colspan=\"10\" class=\"l_name\">Last Name</th> \
-    <th class=\"team\">Team</th>";
+    <th colspan=\"10\" class=\"team\">Team</th>";
 
         var contests = DataStore.contest_list;
         for (var i in contests) {
@@ -241,13 +241,13 @@ var Scoreboard = new function () {
         if (user['team']) {
             if (DataStore.asset_config && DataStore.asset_config["noflags"])
                 result += " \
-            <td class=\"team\">" + user["team"] + "</td>";
+            <td colspan=\"10\" class=\"team\">" + user["team"] + "</td>";
             else
                 result += " \
-    <td class=\"team\" title=\"" + DataStore.teams[user["team"]]["name"] + "\">" + user['key'] + "</td>";
+    <td colspan=\"10\" class=\"team\" title=\"" + DataStore.teams[user["team"]]["name"] + "\">" + user['key'] + "</td>";
         } else {
             result += " \
-    <td class=\"team\">" + user['key'] + "</td>";
+    <td colspan=\"10\" class=\"team\">" + user['key'] + "</td>";
         }
 
         var contests = DataStore.contest_list;
